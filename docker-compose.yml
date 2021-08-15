@@ -1,0 +1,22 @@
+version: '3'
+services:
+  yt_downloader_telegram_bot:
+    build: .
+    container_name: yt_downloader_telegram_bot
+    ports:
+      - 4001:8080
+    networks:
+      - yt_downloader
+    env_file:
+      - .env
+    volumes:
+      - ./files:/usr/files/
+  yt_downloader_redis:
+    image: redis:6.2.5
+    container_name: yt_downloader_redis
+    networks:
+      - yt_downloader
+
+networks:
+  yt_downloader:
+    driver: bridge

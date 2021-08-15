@@ -1,0 +1,2 @@
+# Leave these two lines untouched, they will be skipped by the parsing process.
+# Type below, one per line, the Telegram usernames (they should begin with @ otherwise it is automatically added) allowed to use this bot.
